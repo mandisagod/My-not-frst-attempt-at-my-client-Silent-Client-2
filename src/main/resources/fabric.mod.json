@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "silentclient",
+	"version": "${version}",
+	"name": "Silent Client",
+	"description": "A lightweight client-side mod menu for Minecraft 1.21.11. Press RIGHT_SHIFT to open the Silent menu and toggle HUD/QoL modules, in the spirit of Lunar Client's mod menu. 100% client-side and ban-safe: no combat automation, no ESP, no world-state manipulation.",
+	"authors": [
+		"Rigattzi"
+	],
+	"contact": {
+		"homepage": "https://github.com/",
+		"sources": "https://github.com/"
+	},
+	"license": "MIT",
+	"icon": "assets/silentclient/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"main": [
+			"com.silentclient.SilentClientMod"
+		],
+		"client": [
+			"com.silentclient.client.SilentClient"
+		]
+	},
+	"mixins": [
+		{
+			"config": "silentclient.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.0",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
